@@ -9,7 +9,7 @@ find_package(OpenBabel2 REQUIRED)
 # Version
 set (${PROJECT_NAME}_VERSION_MAJOR 3)
 set (${PROJECT_NAME}_VERSION_MINOR 0)
-set (${PROJECT_NAME}_VERSION_PATCH 0)
+set (${PROJECT_NAME}_VERSION_PATCH 2)
 configure_file ("${PROJECT_SOURCE_DIR}/pharaoConfig.h.in" "${PROJECT_SOURCE_DIR}/include/pharaoConfig.h")
 
 # Release type
@@ -53,7 +53,6 @@ set (sources     ${PharaoDir}/main.cpp
 
 # Include files from pharao project
 include_directories(${PROJECT_SOURCE_DIR}/include)
-include_directories(${PROJECT_SOURCE_DIR}/include/filters)
 include_directories(${OPENBABEL2_INCLUDE_DIR})
 
 # Executables

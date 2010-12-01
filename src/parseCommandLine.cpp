@@ -103,6 +103,7 @@ parseCommandLine(int argc, char* argv[])
 	std::string strvalue, t;
 	std::list<std::string> l;
 	std::list<std::string>::iterator itL;
+   std::string ext;
 	
 	while((choice = getopt_long(argc, argv,"vhqr:d:s:o:p:f:e:m", Arguments, &optionIndex )) != -1)
 	{
@@ -114,6 +115,15 @@ parseCommandLine(int argc, char* argv[])
             
 			case 'r': //..................................................reference 
             o.refInpFile = optarg;
+            ext = getExt(o.refInpFile);
+            if (ext == ".phar")
+            {
+               o.refInpType = PHAR;
+            }
+            else 
+            {
+               o.refInpType = MOL;
+            }
             o.refInpStream = new std::ifstream(optarg);
             if (!o.refInpStream->good())
             {
@@ -123,6 +133,15 @@ parseCommandLine(int argc, char* argv[])
             
 			case 'd': //......................................................dbase
             o.dbInpFile = optarg;
+            ext = getExt(o.dbInpFile);
+            if (ext == ".phar")
+            {
+               o.dbInpType = PHAR;
+            }
+            else 
+            {
+               o.dbInpType = MOL;
+            }
             o.dbInpStream = new std::ifstream(optarg);
             if (!o.dbInpStream->good())
             {

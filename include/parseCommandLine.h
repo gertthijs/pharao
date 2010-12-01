@@ -36,6 +36,7 @@ GNU General Public License for more details.
 #include "mainErr.h"
 #include "stringTokenizer.h"
 #include "pharmacophore.h"
+#include "getExt.h"
 
 
 
