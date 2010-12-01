@@ -44,7 +44,6 @@ parseCommandLine(int argc, char* argv[])
       { "cutOff",            required_argument,   NULL,    3  },
       { "best",              required_argument,   NULL,    4  },
       { "rankBy",            required_argument,   NULL,    5  },
-		{ "noAlign",           no_argument,         NULL,    6  },
 		{ "noHybrid",          no_argument,         NULL,    7  },
       { "info",              required_argument,   NULL,    9  },
 		{ "withExclusion",     no_argument,         NULL,    10 },
@@ -91,7 +90,6 @@ parseCommandLine(int argc, char* argv[])
    o.funcGroupVec[HYBL] = false;
 	
 	o.isQuiet = false;
-	o.noAlign = false;
    o.noHybrid = false;
    o.merge = false;
    o.noNormal = false;
@@ -273,10 +271,6 @@ parseCommandLine(int argc, char* argv[])
             mainErr("Undefined rankby type : " + t);
 				break;
             
-         case 6: //......................................................noAlign
-				o.noAlign = true;
-            break;
-         
          case 7: //.....................................................noHybrid
 				o.noHybrid = true;
             break;
@@ -312,11 +306,6 @@ parseCommandLine(int argc, char* argv[])
 		o.help = true;
 	}
    
-   if (o.refInpFile.empty())
-   {
-      o.noAlign = true;
-   }
-	
 	argc -= optind;
 	argv += optind;
 	return o;

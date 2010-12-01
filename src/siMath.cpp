@@ -1,5 +1,5 @@
 /*******************************************************************************
-stringTokenizer.cpp - Pharao
+siMath.cpp - Pharao
  
 Copyright (C) 2005-2010 by Silicos NV
  

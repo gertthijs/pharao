@@ -69,7 +69,6 @@ class Options
       std::vector<bool>       funcGroupVec;     //  -f  --funcGroup
       bool                    noHybrid;         //      --noHybrid
       double                  epsilon;          //  -e  --epsilon
-      bool                    noAlign;          //      --noAlign
       bool							withExclusion;    //      --withExclusion
       bool                    merge;            //  -m  --merge
       bool                    noNormal;         //  -n  --noNormal
@@ -81,6 +80,8 @@ class Options
    
       Options(void);
       ~Options(void);
+      
+      std::string print(void) const;
 };
 
 

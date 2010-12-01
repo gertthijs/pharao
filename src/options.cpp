@@ -29,7 +29,6 @@ Options::Options():
    funcGroupVec(),
 	noHybrid(false),
    epsilon(0.5),
-   noAlign(false),
    withExclusion(false), 
    merge(false),
    noNormal(false),
@@ -136,6 +135,89 @@ Options::~Options(void)
       delete scoreOutStream;
       scoreOutStream = NULL;
    };
+}
 
 
+
+
+
+
+std::string
+Options::print(void) const
+{
+   std::ostringstream os;
+   os << std::endl;
+   os << "COMMAND_LINE OPTIONS:" << std::endl;
+   os << std::endl;
+   os << "  -> Reference file:    " << (refInpFile.empty() ? "no" : refInpFile) << std::endl;
+   os << "  -> Reference type:    ";
+   if (refInpType == MOL)
+   {
+      os << "MOL" << std::endl;
+   }
+   else if (refInpType == PHAR)
+   {
+      os << "PHAR" << std::endl;
+   }
+   else
+   {
+      os << "UNKNOWN" << std::endl;
+   }
+   os << "  -> Database file:     " << (dbInpFile.empty() ? "no" : dbInpFile) << std::endl;
+   os << "  -> Database type:     ";
+   if (dbInpType == MOL)
+   {
+      os << "MOL" << std::endl;
+   }
+   else if (dbInpType == PHAR)
+   {
+      os << "PHAR" << std::endl;
+   }
+   else
+   {
+      os << "UNKNOWN" << std::endl;
+   }
+   os << "  -> Mol output file:   " << (molOutFile.empty() ? "no" : molOutFile) << std::endl;
+   os << "  -> Pharm output file: " << (pharmOutFile.empty() ? "no" : pharmOutFile) << std::endl;
+   os << "  -> Scores file:       " << (scoreOutFile.empty() ? "no" : scoreOutFile) << std::endl;
+   os << "  -> Cutoff:            ";
+   if (cutOff)
+   {
+      os << cutOff << std::endl;
+   }
+   else
+   {
+      os << "no" << std::endl;
+   }
+   os << "  -> Best hits:         ";
+   if (best)
+   {
+      os << best << std::endl;
+   }
+   else
+   {
+      os << "no" << std::endl;
+   }
+   os << "  -> Rank by:           " << rankby << std::endl;
+   os << "  -> Functional groups: ";
+   if (funcGroupVec[AROM]) os << "AROM ";
+   if (funcGroupVec[HDON]) os << "HDON ";
+   if (funcGroupVec[HACC]) os << "HACC ";
+   if (funcGroupVec[LIPO]) os << "LIPO ";
+   if (funcGroupVec[NEGC]) os << "NEGC ";
+   if (funcGroupVec[POSC]) os << "POSC ";
+   if (funcGroupVec[HYBH]) os << "HYBH ";
+   if (funcGroupVec[HYBL]) os << "HYBL ";
+   os << std::endl;
+   os << "  -> Hybrids:           " << (noHybrid ? "no" : "yes") << std::endl;
+   os << "  -> Epsilon:           " << epsilon << std::endl;
+   os << "  -> Merge pharm:       " << (merge ? "yes" : "no") << std::endl;
+   os << "  -> Include normals:   " << (noNormal ? "no" : "yes") << std::endl;
+   os << "  -> With exclusion:    " << (withExclusion ? "yes" : "no") << std::endl;
+   os << "  -> Scores only:       " << (scoreOnly ? "yes" : "no") << std::endl;
+   os << "  -> Quied mode:        " << (isQuiet ? "yes" : "no") << std::endl;
+   
+   os << std::endl;   
+   std::string r = os.str();
+   return r;
 }

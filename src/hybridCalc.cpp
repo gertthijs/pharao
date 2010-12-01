@@ -25,6 +25,7 @@ GNU General Public License for more details.
 void
 hybridCalc(OpenBabel::OBMol* m, Pharmacophore* pharmacophore)
 {
+   
    Pharmacophore::iterator itP;
    Pharmacophore::iterator itP2;
    for (itP = pharmacophore->begin(); itP != pharmacophore->end(); ++itP)
@@ -66,47 +67,44 @@ hybridCalc(OpenBabel::OBMol* m, Pharmacophore* pharmacophore)
             ++itP2;
             for( ; itP2 != pharmacophore->end(); ++itP2) 
             {
-               if (itP2->func == HDON)
+               if ((itP2->func == HDON) && (_hybridSameHybHPoint(itP2->point, itP->point)))
                {
-                  if (_hybridSameHybHPoint(itP2->point, itP->point)) 
-                  {
-                     //modify first point
-                     itP->func = HYBH;
-                     itP->alpha = funcSigma[HYBH];
+                  //modify first point
+                  itP->func = HYBH;
+                  itP->alpha = funcSigma[HYBH];
                       
-                     // Update normal
-                     itP->normal.x = itP->normal.x - itP->point.x;
-                     itP->normal.y = itP->normal.y - itP->point.y;
-                     itP->normal.z = itP->normal.z - itP->point.z;
+                  // Update normal
+                  itP->normal.x = itP->normal.x - itP->point.x;
+                  itP->normal.y = itP->normal.y - itP->point.y;
+                  itP->normal.z = itP->normal.z - itP->point.z;
                      
-                     itP2->normal.x = itP2->normal.x - itP2->point.x;
-                     itP2->normal.y = itP2->normal.y - itP2->point.y;
-                     itP2->normal.z = itP2->normal.z - itP2->point.z;
+                  itP2->normal.x = itP2->normal.x - itP2->point.x;
+                  itP2->normal.y = itP2->normal.y - itP2->point.y;
+                  itP2->normal.z = itP2->normal.z - itP2->point.z;
                      
-                     itP->normal.x = (itP->normal.x + itP2->normal.x) / 2.0;
-                     itP->normal.y = (itP->normal.y + itP2->normal.y) / 2.0;
-                     itP->normal.z = (itP->normal.z + itP2->normal.z) / 2.0;
+                  itP->normal.x = (itP->normal.x + itP2->normal.x) / 2.0;
+                  itP->normal.y = (itP->normal.y + itP2->normal.y) / 2.0;
+                  itP->normal.z = (itP->normal.z + itP2->normal.z) / 2.0;
                      
-                     double length(sqrt(itP->normal.x*itP->normal.x + 
-                                        itP->normal.y*itP->normal.y + 
-                                        itP->normal.z*itP->normal.z));
+                  double length(sqrt(itP->normal.x*itP->normal.x + 
+                                     itP->normal.y*itP->normal.y + 
+                                     itP->normal.z*itP->normal.z));
                      
-                     itP->normal.x /= length;
-                     itP->normal.y /= length;
-                     itP->normal.z /= length;
+                  itP->normal.x /= length;
+                  itP->normal.y /= length;
+                  itP->normal.z /= length;
                      
-                     itP->normal.x += itP->point.x;
-                     itP->normal.y += itP->point.y;
-                     itP->normal.z += itP->point.z;
+                  itP->normal.x += itP->point.x;
+                  itP->normal.y += itP->point.y;
+                  itP->normal.z += itP->point.z;
                                                     
-                     //remove second point
-                     pharmacophore->erase(itP2);
-                     --itP2;
-                  }
+                  //remove second point
+                  pharmacophore->erase(itP2);
+                  --itP2;
                }
             }
             break;
-        
+
          //................................................................
          case HDON:
             itP2 = itP;
@@ -149,15 +147,11 @@ hybridCalc(OpenBabel::OBMol* m, Pharmacophore* pharmacophore)
                      //remove second point
                      pharmacophore->erase(itP2);
                      --itP2;
-              
-                     //remove second point
-                     pharmacophore->erase(itP2);
-                     --itP2;
                   }
                }
             }
             break;
-      
+
          //................................................................
          case LIPO:
             itP2 = itP;

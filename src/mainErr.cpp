@@ -26,5 +26,5 @@ void
 mainErr(const std::string& msg) 
 {
 	std::cerr << "**MainError**  " << msg << std::endl;
-	exit(1);
+   exit(1);
 }

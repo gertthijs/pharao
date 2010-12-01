@@ -55,11 +55,11 @@ aromFuncCalc(OpenBabel::OBMol* mol, Pharmacophore* pharmacophore)
             p.point.y = center.y();
             p.point.z = center.z();
             p.hasNormal = true;
-            p.normal.x = norm1.x();
-            p.normal.y = norm1.y();
-            p.normal.z = norm1.z();
-            p.alpha = funcSigma[AROM];
             
+            p.normal.x = norm1.x() + center.x();
+            p.normal.y = norm1.y() + center.y();
+            p.normal.z = norm1.z() + center.z();
+            p.alpha = funcSigma[AROM];
             pharmacophore->push_back(p);
          }
       }

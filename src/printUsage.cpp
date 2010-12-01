@@ -54,7 +54,6 @@ printUsage()
    std::cerr << "  -m  --merge" << std::endl;
    std::cerr << "  -n  --noNormal" << std::endl;
    std::cerr << "      --noHybrid" << std::endl;
-   std::cerr << "      --noAlign" << std::endl;
    std::cerr << "      --withExclusion" << std::endl;
    std::cerr << "      --scoreOnly" << std::endl;
    std::cerr << std::endl;
@@ -64,5 +63,4 @@ printUsage()
    std::cerr << "      --info            <option>" << std::endl;
    std::cerr << "  -q  --quiet" << std::endl;
    std::cerr << std::endl;
-   exit(0);
 }
