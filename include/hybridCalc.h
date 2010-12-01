@@ -39,4 +39,4 @@ bool     _hybridSameHybLPoint(const Coordinate&, const Coordinate&);
 
 
 
-#endif __SILICOS_PHARAO_HYBRIDCALC_H__
+#endif

@@ -30,7 +30,7 @@ GNU General Public License for more details.
 // OpenBabel
 
 // Pharao
-#include"pharmacophore.h"
+#include "pharmacophore.h"
 #include "utilities.h"
 
 
@@ -60,4 +60,4 @@ class FunctionMapping
 
 
 
-#endif __PHARAO_FUNCTIONMAPPING_H__
+#endif

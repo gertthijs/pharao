@@ -74,5 +74,5 @@ void positionMolecule(OpenBabel::OBMol* m, SiMath::Matrix& U, SolutionInfo& s);
 		
 
 
-#endif __SILICOS_PHARAO_UTILITIES_H__
+#endif
 

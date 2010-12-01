@@ -40,4 +40,4 @@ void logOut(Result*, Options&);
 
 
 
-#endif __SILICOS_PHARAO_LOGOUT_H__
+#endif

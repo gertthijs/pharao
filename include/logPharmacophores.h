@@ -37,4 +37,4 @@ void logPharmacophores(Result*, Options&);
 
 
 
-#endif __SILICOS_PHARAO_LOGPHARMACOPHORES_H__
+#endif

@@ -37,4 +37,4 @@ std::list<std::string>  stringTokenizer(const std::string&, const std::string&);
 
 
 
-#endif __SILICOS_PHARAO_STRINGTOKENIZER_H__
+#endif

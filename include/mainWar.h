@@ -38,4 +38,4 @@ void mainWar(const std::string&);
 
 
 
-#endif __SILICOS_PHARAO_MAINWAR_H__
+#endif

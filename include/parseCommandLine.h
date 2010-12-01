@@ -26,6 +26,7 @@ GNU General Public License for more details.
 // General
 #include <list>
 #include <getopt.h>
+#include <stdlib.h>
 #include <map>
 
 // OpenBabel
@@ -45,4 +46,4 @@ Options parseCommandLine(int argc, char* argv[]);
 
 
 
-#endif __SILICOS_PHARAO_PARSECOMMANDLINE_H__
+#endif

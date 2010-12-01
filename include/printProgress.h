@@ -36,4 +36,4 @@ void printProgress(int);
 
 
 
-#endif __SILICOS_PHARAO_PRINTPROGRESS_H__
+#endif

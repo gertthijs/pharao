@@ -86,4 +86,4 @@ class Options
 
 
 
-#endif __SILICOS_PHARAO_OPTIONS_H__
+#endif

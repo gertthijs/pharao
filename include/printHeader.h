@@ -38,4 +38,4 @@ void printHeader(void);
 
 
 
-#endif __SILICOS_PHARAO_PRINTHEADER_H__
+#endif

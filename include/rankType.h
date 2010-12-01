@@ -32,4 +32,4 @@ enum RankType
 
 
 
-#endif __SILICOS_PHARAO_RANKTYPE_H__
+#endif

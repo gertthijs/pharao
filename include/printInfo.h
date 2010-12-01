@@ -25,6 +25,7 @@ GNU General Public License for more details.
 
 // General
 #include <iostream>
+#include <stdlib.h>
 #include <string>
 
 // OpenBabel
@@ -38,4 +39,4 @@ void printInfo(const std::string&);
 
 
 
-#endif __SILICOS_PHARAO_PRINTINFO_H__
+#endif

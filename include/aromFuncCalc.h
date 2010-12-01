@@ -37,4 +37,4 @@ void aromFuncCalc(OpenBabel::OBMol*, Pharmacophore*);
 
 
 
-#endif __SILICOS_PHARAO_AROMFUNCCALC_H__
+#endif

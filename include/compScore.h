@@ -40,4 +40,4 @@ class CompScore
 
 
 
-#endif __SILICOS_PHARAO_COMPSCORE_H__
+#endif

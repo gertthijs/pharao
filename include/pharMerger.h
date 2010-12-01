@@ -51,4 +51,4 @@ class PharMerger
 
 
 
-#endif __SILICOS_PHARAO_PHARMERGER_H__
+#endif

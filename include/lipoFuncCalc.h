@@ -79,4 +79,4 @@ std::list<OpenBabel::OBAtom*> _lipoGetNeighbors(OpenBabel::OBAtom*);
 void                          _lipoLabelNeighbors(OpenBabel::OBAtom*, double);
 
 
-#endif __SILICOS_PHARAO_LIPOFUNCCALC_H__
+#endif

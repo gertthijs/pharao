@@ -38,4 +38,4 @@ void addBest(Result&, const Options&, std::vector<Result*>&);
 
 
 
-#endif __SILICOS_PHARAO_ADDBEST_H__
+#endif

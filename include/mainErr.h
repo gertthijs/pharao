@@ -26,6 +26,7 @@ GNU General Public License for more details.
 
 // General
 #include <string>
+#include <stdlib.h>
 #include <iostream>
 
 // OpenBabel
@@ -38,4 +39,4 @@ void mainErr(const std::string&);
 
 
 
-#endif __SILICOS_PHARAO_MAINERR_H__
+#endif

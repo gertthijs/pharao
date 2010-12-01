@@ -27,6 +27,7 @@ GNU General Public License for more details.
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 #include <vector>
 #include <list>
 #include <map>
@@ -167,4 +168,4 @@ class PharmacophoreWriter
 	
 
 
-#endif __SILICOS_PHARAO_PHARMACOPHORE_H__
+#endif

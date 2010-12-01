@@ -45,4 +45,4 @@ void calcPharm(OpenBabel::OBMol*, Pharmacophore*, const Options&);
 
 
 
-#endif __SILICOS_PHARAO_CALCPHARM_H__
+#endif

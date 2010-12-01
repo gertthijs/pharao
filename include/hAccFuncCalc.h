@@ -66,4 +66,4 @@ std::list<OpenBabel::OBAtom*>    _hAccGetNeighbors(OpenBabel::OBAtom*);
 Coordinate                       _hAccCalcNormal(OpenBabel::OBAtom*);
 bool                             _hAccDelocalized(OpenBabel::OBAtom*);
 
-#endif __SILICOS_PHARAO_HACCFUNCCALC_H__
+#endif

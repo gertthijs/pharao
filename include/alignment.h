@@ -74,4 +74,4 @@ class Alignment
 
 
 
-#endif __SILICOS_PHARAO_ALIGNMENT_H__
+#endif

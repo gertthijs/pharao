@@ -50,4 +50,4 @@ std::ostream& operator<< (std::ostream&, const Coordinate&);
 
 
 
-#endif __SILICOS_PHARAO_COORDINATE_H__
+#endif

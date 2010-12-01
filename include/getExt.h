@@ -37,4 +37,4 @@ std::string getExt(std::string&);
 
 
 
-#endif __SILICOS_PHARAO_GETEXT_H__
+#endif

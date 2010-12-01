@@ -33,4 +33,4 @@ enum FileType
 
 
 
-#endif __SILICOS_PHARAO_FILETYPE_H__
+#endif

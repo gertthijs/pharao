@@ -62,4 +62,4 @@ class Result
 
 
 
-#endif __SILICOS_PHARAO_RESULT_H__
+#endif

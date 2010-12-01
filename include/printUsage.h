@@ -37,4 +37,4 @@ void printUsage(void);
 
 
 
-#endif __SILICOS_PHARAO_PRINTUSAGE_H__
+#endif

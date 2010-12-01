@@ -37,4 +37,4 @@ void chargeFuncCalc(OpenBabel::OBMol*, Pharmacophore*);
 
 
 
-#endif __SILICOS_PHARAO_CHARGEFUNCCALC_H__
+#endif

@@ -39,4 +39,4 @@ void logScores(Result*, Options&);
 
 
 
-#endif __SILICOS_PHARAO_LOGSCORES_H__
+#endif

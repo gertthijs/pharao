@@ -68,4 +68,4 @@ Coordinate                       _hDonCalcNormal(OpenBabel::OBAtom*);
 
 
 
-#endif __SILICOS_PHARAO_HDONFUNCCALC_H__
+#endif

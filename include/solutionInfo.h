@@ -51,4 +51,4 @@ class SolutionInfo
 
 
 
-#endif __SILICOS_PHARAO_SOLUTIONINFO_H__
+#endif
