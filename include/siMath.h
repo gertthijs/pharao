@@ -24,6 +24,7 @@ GNU General Public License for more details.
 
 
 // General
+#include <cstring>
 #include <vector>
 #include <math.h>
 
@@ -52,7 +53,7 @@ GNU General Public License for more details.
 
 #ifndef sign
 	template <class T> inline T sign(const T & a, const T & b ) {return (b >= 0.0) ? ( a>=0 ? a : -a) : (a>=0 ? -a : a);}
-#endif sign
+#endif
 					
 
 
