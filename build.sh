@@ -23,4 +23,4 @@ cmake ../
 make -j $NPROCS
 
 # inform about the freshly compiled exe
-ls -l pharao-3.0.4/pharao
+ls -l $PWD/pharao
